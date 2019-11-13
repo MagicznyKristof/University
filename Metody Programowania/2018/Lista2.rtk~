@@ -1,5 +1,0 @@
-#lang racket
- (define s (lambda (x) (* x x)))
-
-(define (f g)
-  (g 2))
