@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Zadanie12.GUI">
+  <grid id="27dc6" binding="rootPanel" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="1204" height="862"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <grid id="9d343" binding="systemPanel" custom-create="true" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="2" hsize-policy="2" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="1200" height="800"/>
+          </grid>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children/>
+      </grid>
+      <toolbar id="27c3d">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="-1" height="20"/>
+          </grid>
+        </constraints>
+        <properties>
+          <floatable value="false"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <hspacer id="c26af">
+            <constraints/>
+          </hspacer>
+          <component id="50a61" class="javax.swing.JLabel" binding="SimulationSpeed">
+            <constraints/>
+            <properties>
+              <horizontalAlignment value="4"/>
+              <horizontalTextPosition value="4"/>
+              <text value="simulation speed (seconds:days)"/>
+            </properties>
+          </component>
+          <component id="10c6f" class="javax.swing.JSpinner" binding="simSpeedSpinner" custom-create="true">
+            <constraints/>
+            <properties/>
+          </component>
+        </children>
+      </toolbar>
+      <toolbar id="c59b8">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="-1" height="20"/>
+          </grid>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="a5943" class="javax.swing.JSlider" binding="groupSep" custom-create="true">
+            <constraints/>
+            <properties>
+              <majorTickSpacing value="1"/>
+              <maximum value="400"/>
+              <value value="180"/>
+            </properties>
+          </component>
+          <component id="3922" class="javax.swing.JSlider" binding="groupScale" custom-create="true">
+            <constraints/>
+            <properties>
+              <majorTickSpacing value="1"/>
+              <maximum value="400"/>
+              <value value="50"/>
+            </properties>
+          </component>
+          <component id="dbd2b" class="javax.swing.JSlider" binding="scale" custom-create="true">
+            <constraints/>
+            <properties>
+              <majorTickSpacing value="1"/>
+              <maximum value="10"/>
+              <value value="5"/>
+            </properties>
+          </component>
+        </children>
+      </toolbar>
+    </children>
+  </grid>
+</form>

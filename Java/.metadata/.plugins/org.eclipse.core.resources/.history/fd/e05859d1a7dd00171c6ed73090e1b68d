@@ -1,0 +1,36 @@
+package calendar;
+
+import javax.swing.AbstractListModel;
+
+class ListData extends AbstractListModel {
+    private int year,month,startDay;
+
+    public ListData() {
+    }
+
+    public void setNewDate(int year,int month) {
+        this.year=year;
+        this.month=month;
+        this.startDay=CalendarTool.getStartDay(year, month);
+    }
+
+    public int getSize() {
+        return CalendarTool.getMonthLength(year,month);
+    }
+
+    public Object getElementAt(int d) {
+        if (year==1582 && month==9) {
+            if (d>=4)
+                return CalendarTool.getFullDay((startDay+d)%7)+", "+Integer.toString(d+1+10)+" "+CalendarTool.getFullMonth(month);
+            else
+                return CalendarTool.getFullDay((startDay+d)%7)+", "+Integer.toString(d+1)+" "+CalendarTool.getFullMonth(month);
+        }
+        else
+            return CalendarTool.getFullDay((startDay+d)%7)+", "+Integer.toString(d+1)+" "+CalendarTool.getFullMonth(month);
+    }
+
+    @Override
+    protected void fireContentsChanged(Object source, int index0, int index1) {
+        super.fireContentsChanged(source,index0,index1);
+    }
+}

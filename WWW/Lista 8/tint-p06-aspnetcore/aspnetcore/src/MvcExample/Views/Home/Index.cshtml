@@ -1,0 +1,22 @@
+﻿@model IEnumerable<MvcExample.Models.Person>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+
+    <table>
+        @foreach (var p in Model)
+        {
+            <tr>
+                <td>@p.FirstName</td>
+                <td>@p.LastName</td>
+                <td>@p.Address</td>
+                <td><a href="@Url.Action("Details", new { id = p.Id })">Szczegóły</a></td>
+            </tr>
+        }
+    </table>
+
+</body>
+</html>

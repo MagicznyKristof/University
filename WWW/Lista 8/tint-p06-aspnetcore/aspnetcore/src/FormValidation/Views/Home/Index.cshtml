@@ -1,0 +1,21 @@
+﻿@model FormValidation.Models.Person
+<!DOCTYPE html >
+<html>
+<head>
+    <title>FormSimple</title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary()
+        <table border="1">
+            <tr><td>@Html.LabelFor(e => e.FirstName)</td><td>@Html.EditorFor(e => e.FirstName) @Html.ValidationMessageFor(model => model.FirstName)</td></tr>
+            <tr><td>@Html.LabelFor(e => e.LastName)</td><td>@Html.EditorFor(e => e.LastName) @Html.ValidationMessageFor(model => model.LastName)</td></tr>
+            <tr><td>@Html.LabelFor(e => e.Email)</td><td>@Html.EditorFor(e => e.Email) @Html.ValidationMessageFor(model => model.Email)</td></tr>
+            <tr><td>@Html.LabelFor(e => e.PostalCode)</td><td>@Html.EditorFor(e => e.PostalCode) @Html.ValidationMessageFor(model => model.PostalCode)</td></tr>
+        </table>
+        <input type="submit" />
+        @Html.AntiForgeryToken()
+    }
+</body>
+</html>

@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>FormSimple</title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        <table cellpadding="2" cellspacing="1" border="1">
+            <tr><td>Imię:</td><td>@Html.Editor("Imie")</td></tr>
+            <tr><td>Nazwisko</td><td>@Html.TextBox("Nazwisko")</td></tr>
+        </table>
+        <input type="submit" />
+    }
+</body>
+</html>

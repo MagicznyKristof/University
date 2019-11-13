@@ -1,0 +1,19 @@
+﻿@model FormModel.Models.Person
+<!DOCTYPE html >
+<html>
+<head>
+    <title>FormSimple</title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        <table border="1">
+            <tr><td>@Html.LabelFor(e => e.FirstName)</td><td>@Html.EditorFor(e => e.FirstName)</td></tr>
+            <tr><td>@Html.LabelFor(e => e.LastName)</td><td>@Html.EditorFor(e => e.LastName)</td></tr>
+            <tr><td>@Html.LabelFor(e => e.Email)</td><td>@Html.EditorFor(e => e.Email)</td></tr>
+            <tr><td>@Html.LabelFor(e => e.PostalCode)</td><td>@Html.EditorFor(e => e.PostalCode)</td></tr>
+        </table>
+        <input type="submit" />
+    }
+</body>
+</html>

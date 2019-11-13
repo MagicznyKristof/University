@@ -1,0 +1,19 @@
+﻿@model MvcExample.Models.Person
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+
+    <table>
+            <tr>
+                <td>Imię:</td><td>@Model.FirstName</td>
+                <td>Nazwisko:</td><td>@Model.LastName</td>
+                <td>Adres:</td><td>@Model.Address</td>
+            </tr>
+    </table>
+    @Html.ActionLink("Powrót do listy", "Index")
+
+</body>
+</html>

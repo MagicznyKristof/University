@@ -1,0 +1,57 @@
+#lang racket
+
+(let
+    ([x 3])
+  (+ x 3))  ;y unbound
+
+(let
+    ([x 1]
+     [y (+ 3 2)])   ;x unbound
+  (+ x y))
+
+(let
+    ([x 1])
+  (let
+      ([y (+ x 2)])
+    (* x y)))
+
+((lambda
+    (x y)
+  (* x y 3)) 2 4) ;z unbound
+
+((let
+    ([x 1])
+  (lambda
+      (y z)
+    (* x y z))) 42 4 )  ;dziala tez jak argumenty dasz w let'cie
+
+
+
+(define (compose f g)
+  (lambda (x) (f (g x)))
+)
+
+(define (repeated p n)
+  (if (= n 1)
+      p
+      (compose p (repeated p (- n 1)))
+      )
+  )
+
+(define (product-rec f inc a b)        ;duże pi
+  (if (> a b)
+      1
+      (product-rec f inc (inc a
+
+
+
+
+
+
+
+
+
+
+
+
+

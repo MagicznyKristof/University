@@ -1,0 +1,42 @@
+package calendar;
+
+import java.util.GregorianCalendar;
+
+class CalendarTool {
+    private static int[] dayMonth={31,28,31,30,31,30,31,31,30,31,30,31};
+    private static int[] dayMonthLeapYear={31,29,31,30,31,30,31,31,30,31,30,31};
+    private static String[] fullMonth={"styczeń","luty","marzec","kwiecień","maj","czerwiec","lipiec","sierpień","wrzesień","październik","listopad","grudzień"};
+    private static String[] fullDay={"poniedziałek","wtorek","środa","czwartek","piątek","sobota","niedziela"};
+    public static int maxYear=10000;
+
+    private static boolean isLeapYear(int year) {
+        GregorianCalendar c= new GregorianCalendar(year,1,1);
+        return c.isLeapYear(year);
+    }
+
+    public static String getFullDay(int day) {
+        return fullDay[day];
+    }
+
+    public static String getFullMonth(int month) {
+        return fullMonth[month];
+    }
+
+    public static int getMonthLength(int year, int month) {
+        if (year==1582 && month==9)
+            return dayMonth[month]-10;
+        if (isLeapYear(year))
+            return dayMonthLeapYear[month];
+        else
+            return dayMonth[month];
+    }
+
+    public static int getStartDay(int year, int month) {
+        GregorianCalendar c = new GregorianCalendar(year,month,1);
+        int startDay=c.get(GregorianCalendar.DAY_OF_WEEK);
+        startDay-=2;
+        if (startDay==-1)
+            startDay=6;
+        return startDay;
+    }
+}

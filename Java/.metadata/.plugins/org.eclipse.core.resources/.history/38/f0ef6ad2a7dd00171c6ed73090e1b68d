@@ -1,0 +1,19 @@
+package calendar;
+
+import java.awt.Color;
+import java.awt.Component;
+import javax.swing.DefaultListCellRenderer;
+import javax.swing.JLabel;
+import javax.swing.JList;
+import javax.swing.ListCellRenderer;
+
+class MyRenderer implements ListCellRenderer {
+  protected DefaultListCellRenderer defaultRenderer = new DefaultListCellRenderer();
+
+  public Component getListCellRendererComponent(JList list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
+    JLabel renderer = (JLabel) defaultRenderer.getListCellRendererComponent(list, value, index, isSelected,cellHasFocus);
+    if (value.toString().contains(CalendarTool.getFullDay(6)))
+        renderer.setForeground(Color.red);
+    return renderer;
+  }
+}

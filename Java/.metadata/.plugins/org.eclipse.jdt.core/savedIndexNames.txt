@@ -1,0 +1,3 @@
+INDEX VERSION 1.126+/home/magicznykrzysztof/Desktop/Uniwersytet/Java/.metadata/.plugins/org.eclipse.jdt.core
+4261493547.index
+2147434133.index
