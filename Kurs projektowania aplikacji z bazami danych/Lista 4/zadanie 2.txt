@@ -1,0 +1,66 @@
+Tabela wyjściowa:
+ID
+Patient
+Patient Address
+Appointment time and location
+Price
+Physician
+Appointment cause
+
+1ENF:
+Appointments:
+ID
+Patient
+Address
+Postal code
+City
+Appointment time 
+Appointment location
+Price
+Physician
+Appointment type
+Appointment cause
+
+2ENF
+Patients:
+Patient ID
+Name
+Address
+Postal code
+City
+
+Appointments:
+Patient ID
+Appointment time 
+Appointment location
+Price
+Physician
+Appointment type
+Appointment cause
+
+Łączymy oczywiście po ID pacjenta
+
+3ENF
+Patients:
+Patient ID
+Name
+Address
+Postal code (czy to redundantna dana?)
+City
+
+Appointments:
+Patient ID
+Appointment time 
+Price
+Physician
+Appointment cause
+
+Physican:
+Physican
+Specialization (appointment type)
+Room (appointment location)
+
+
+
+Appointment location i Appointment type możemy usunąć, zakładamy, że każdy lekarz ma swój pokój i w nim przyjmuje
+(ale w jednym pokoju może przyjmować wielu lekarzy!) oraz swoją specjalizację - nie pójdziemy do dentysty z zapaleniem wyrostka. 
