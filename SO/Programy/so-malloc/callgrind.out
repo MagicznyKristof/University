@@ -1,0 +1,611 @@
+version: 1
+creator: callgrind-3.11.0
+pid: 7269
+cmd:  ./mdriver -f traces/xterm.rep
+part: 1
+
+
+desc: I1 cache: 
+desc: D1 cache: 
+desc: LL cache: 
+
+desc: Timerange: Basic block 0 - 318047934
+desc: Trigger: Program termination
+
+positions: line
+events: Ir
+summary: 731389557
+
+
+ob=(3) /lib/x86_64-linux-gnu/libc-2.23.so
+fl=(116) /build/glibc-e6zv40/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy.S
+fn=(546) memcpy@@GLIBC_2.14
+32 1
++2 1
++1 1
++6 1
++1 1
++1 1
++1 1
+
+fl=(117) /build/glibc-e6zv40/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-avx-unaligned.S
+fn=(548) __memcpy_avx_unaligned
+41 9
++4 9
++1 9
++1 9
++1 9
++1 9
++1 9
++38 9
++1 9
++23 9
++1 9
++1 6
++1 6
++1 6
++1 6
++1 6
++1 6
++1 6
++1 6
++1 6
++4 3
++1 3
++1 3
++1 3
++1 3
+
+fl=(68) /build/glibc-e6zv40/glibc-2.23/csu/../csu/libc-start.c
+fn=(266) (below main)
+cob=(5) /home/magicznykrzysztof/Desktop/Uniwersytet/SO/2020/so-malloc/malloc-MagicznyKristof-master/malloc-MagicznyKristof/mdriver
+cfi=(73) /home/magicznykrzysztof/Desktop/Uniwersytet/SO/2020/so-malloc/malloc-MagicznyKristof-master/malloc-MagicznyKristof/mdriver.c
+cfn=(290) main
+calls=1 229 
+291 731389557
+
+ob=(1) /lib/x86_64-linux-gnu/ld-2.23.so
+fl=(19) /build/glibc-e6zv40/glibc-2.23/string/../sysdeps/x86_64/multiarch/../strcmp.S
+fn=(54) strcmp
+144 6
++1 6
++2 6
++1 6
++21 6
++1 6
++1 4
++1 4
++1 3
++1 3
++1 3
++1 3
++21 3
++1 3
++1 3
++1 3
++1 3
++1 3
++1 3
++15 3
++1 3
++1 3
++1 3
++1 3
++1 3
++1 3
++1 3
++1 3
++5 3
++1 3
++1 3
++1 3
++1 3
++1 3
+1321 2
++1 2
++1 2
++1 2
++1 2
++2 2
++1 2
++1 2
++1 2
++1 2
++1 2
++1 2
+2071 1
++1 1
++1 1
++1 1
++1 1
++2 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++2 1
++4 1
++1 1
++1 1
++6 1
++1 1
++2 2
++4 1
++1 1
++3 1
++1 1
++1 1
++3 1
++1 1
++1 1
++6 1
++1 1
++1 1
++1 1
++1 1
++1 1
++74 1
++2 1
++1 1
++1 1
++1 1
+-3 2
++1 2
++1 2
++1 2
++6 6
++6 6
++1 6
++8 6
++1 6
+
+fl=(1) ???
+fn=(0) 0x0000000000000c30
+cob=(5)
+cfi=(65) ???
+cfn=(252) _start
+calls=1 0 
+0 731389557
+
+fl=(6) /build/glibc-e6zv40/glibc-2.23/elf/dl-lookup.c
+fn=(174) do_lookup_x
+355 7
++1 1
+-1 5
++48 1
+-30 1
+-11 1
++41 1
++7 2
+-7 2
+-30 4
++37 4
+-44 2
++3 2
+-3 4
++3 4
++4 6
++4 6
++4 6
++6 9
++8 3
+-4 3
++1 3
++3 6
++1 9
++3 3
++1 6
++2 6
++8 3
+-8 3
++8 30
+-99 2
+553 16
++1 4
+cfi=(34) /build/glibc-e6zv40/glibc-2.23/elf/dl-misc.c
+cfn=(106) _dl_name_match_p
+calls=56 288 
+* 186
+* 6
++3 6
++4 8
+-92 2
++50 8
++16 2
++1 1
++1 2
+413 6
++2 2
++2 13
++3 5
++2 2
++1 5
+-1 1
++1 7
+-1 1
++1 3
+cfn=(176) check_match
+calls=97 92 
+* 150
++4 3
++12 9
+
+fn=(176)
+92 8
++3 7
++12 6
++3 8
+cfi=(19)
+cfn=(54)
+calls=36 +34 
+* 24
+* 2
++5 1
+-1 1
++1 1
++2 2
++19 2
++1 8
++46 1
+-7 1
++7 5
+-45 3
+cfi=(19)
+cfn=(54)
+calls=96 +6 
+* 67
+* 3
+
+fn=(172) _dl_lookup_symbol_x
+806 11
+568 1
+806 4
+568 5
++1 1
+-1 1
++1 3
+-1 3
++1 5
+-1 5
++1 15
+-1 17
+808 1
++4 1
++4 1
+-8 1
++1 2
++7 3
++7 1
+-2 1
++2 1
+-2 1
++6 1
+-7 1
++7 2
+-7 6
++9 14
+cfn=(174)
+calls=103 355 
+* 593
++3 3
++26 2
++22 1
++1 7
++31 1
++9 5
++14 3
++3 4
++5 1
++2 8
+
+fl=(67) /build/glibc-e6zv40/glibc-2.23/elf/../elf/dl-runtime.c
+fn=(262) _dl_fixup
+66 2
++5 2
+-5 1
++3 2
++3 1
+-1 2
+-3 1
++5 6
++1 1
+-1 1
++1 2
++5 2
++4 2
++4 3
++4 1
++1 5
++2 4
++7 2
+-1 1
++1 1
++10 9
+cfi=(6)
+cfn=(172)
+calls=20 806 
+* 736
+* 1
++4 5
++10 6
++16 1
+-8 1
++8 3
++4 3
+fi=(5) /build/glibc-e6zv40/glibc-2.23/elf/../sysdeps/x86_64/dl-machine.h
++92 1
+fe=(67)
+-88 3
+fi=(112) /build/glibc-e6zv40/glibc-2.23/elf/../sysdeps/x86_64/dl-irel.h
+32 1
+cob=(3)
+cfi=(116)
+cfn=(546)
+calls=1 * 
+* 7
+* 1
+fe=(67)
+
+fl=(34)
+fn=(106)
+288 10
++1 4
+cfi=(19)
+cfn=(54)
+calls=70 144 
+* 66
+* 2
++1 2
+-1 2
++3 2
++2 4
++4 2
+-4 4
++1 6
+cfi=(19)
+cfn=(54)
+calls=74 144 
+* 66
+* 4
++6 2
+-1 2
++1 8
+
+fl=(66) /build/glibc-e6zv40/glibc-2.23/elf/../sysdeps/x86_64/dl-trampoline.h
+fn=(260) _dl_runtime_resolve_xsave
+
+fn=(261) _dl_runtime_resolve_xsave'2
+71 1
++3 1
++2 1
++8 1
++6 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++4 1
++1 1
++3 1
++1 1
++2 1
++1 1
++1 1
++1 1
++1 1
++1 1
++2 1
++13 1
++1 1
++1 1
+cfi=(67)
+cfn=(262)
+calls=19 -63 
+* 820
++1 1
++5 1
++1 1
++1 1
++2 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++2 1
++2 1
++4 1
++3 1
+
+ob=(5)
+fl=(65)
+fn=(252)
+cob=(1)
+cfi=(66)
+cfn=(260)
+calls=1 71 
+0 731389557
+
+fl=(115) /home/magicznykrzysztof/Desktop/Uniwersytet/SO/2020/so-malloc/malloc-MagicznyKristof-master/malloc-MagicznyKristof/mm.c
+fn=(536) mm_free
+244 21414
++1 64242
++2 10707
++1 21414
+134 96363
++1 10707
++3 42828
++4 42255
++6 7770
++2 141
++1 564
++1 141
++5 7065
++1 8478
++1 3669
+-15 20691
++1 13794
+
+fn=(538) mm_realloc
+259 405
++6 90
++3 216
++7 72
++1 240
++16 18
++1 81
++14 27
++3 18
+fi=(97) /usr/include/x86_64-linux-gnu/bits/string3.h
+53 54
+cob=(3)
+cfi=(117)
+cfn=(548)
+calls=8 -12 
+* 148
+cob=(1)
+cfi=(66)
+cfn=(261)
+calls=1 +18 
+* 880
+* 13
+fe=(115)
+245 27
++2 18
++1 9
++1 9
+cfn=(522) coalesce
+calls=9 134 
+* 189
+* 63
++46 27
++1 63
++1 18
++2 54
++1 9
+-23 15
++1 3
++1 9
++1 18
++1 12
+cfn=(522)
+calls=3 134 
+* 63
++1 21
+-16 63
+
+fn=(520) mm_malloc
+219 49974
++4 199896
+103 24987
++1 24987
++3 68409684
+-3 524940030
++1 136823316
+-10 9870
++76 1974
+cfi=(95) /home/magicznykrzysztof/Desktop/Uniwersytet/SO/2020/so-malloc/malloc-MagicznyKristof-master/malloc-MagicznyKristof/memlib.c
+cfn=(518) mem_sbrk
+calls=1974 56 
+* 15792
+* 5922
++4 3948
++1 3948
++1 1974
++3 1974
+cfn=(522)
+calls=1974 -46 
+* 53709
+* 3948
+-62 9870
++2 3948
++1 7884
++1 1971
++1 1971
++1 3942
++1 9855
+-7 46026
++2 46026
++1 83328
++1 20832
++1 62496
++1 20832
++1 104160
++2 4362
++1 10905
+-1 6
++1 15
+
+fn=(522)
+134 29790
++1 1986
++3 7944
++4 3225
++6 3870
++11 1341
+-9 645
++1 2580
++1 2580
+
+fl=(95)
+fn=(518)
+56 1974
++2 9870
++6 1974
++1 1974
+
+fl=(73)
+fn=(560) eval_mm_speed
+cfi=(115)
+cfn=(538)
+calls=15 259 
+840 696
+cfi=(115)
+cfn=(536)
+calls=3569 244 
+852 124081
+cfi=(115)
+cfn=(520)
+calls=8329 219 
+831 243671454
+
+fn=(552) fsecs
+cfn=(560)
+calls=1 814 
+187 243796231
+
+fn=(290)
+cfi=(115)
+cfn=(538)
+calls=15 259 
+673 1560
+cfi=(115)
+cfn=(538)
+calls=15 259 
+772 696
+cfi=(115)
+cfn=(536)
+calls=3569 244 
+712 124081
+cfi=(115)
+cfn=(520)
+calls=8329 219 
+647 243671454
+cfi=(115)
+cfn=(536)
+calls=3569 244 
+792 124081
+cfi=(115)
+cfn=(520)
+calls=8329 219 
+756 243671454
+cfn=(552)
+calls=1 182 
+217 243796231
+
+totals: 731389557

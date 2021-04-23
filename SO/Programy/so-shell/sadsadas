@@ -1,0 +1,46 @@
+#define SLIST_HEAD(name, type)                                                 \
+#define SLIST_HEAD_INITIALIZER(head)                                           \
+#define SLIST_ENTRY(type)                                                      \
+#define SLIST_FIRST(head) ((head)->slh_first)
+#define SLIST_END(head) NULL
+#define SLIST_EMPTY(head) ((head)->slh_first == NULL)
+#define SLIST_NEXT(elm, field) ((elm)->field.sle_next)
+#define SLIST_FOREACH(var, head, field)                                        \
+  for ((var) = (head)->slh_first; (var) != SLIST_END(head);                    \
+#define SLIST_FOREACH_SAFE(var, head, field, tvar)                             \
+  for ((var) = SLIST_FIRST((head));                                            \
+       (var) != SLIST_END(head) && ((tvar) = SLIST_NEXT((var), field), 1);     \
+#define SLIST_INIT(head)                                                       \
+    (head)->slh_first = SLIST_END(head);                                       \
+#define SLIST_INSERT_AFTER(slistelm, elm, field)                               \
+#define SLIST_INSERT_HEAD(head, elm, field)                                    \
+#define SLIST_REMOVE_AFTER(slistelm, field)                                    \
+      SLIST_NEXT(SLIST_NEXT((slistelm), field), field);                        \
+#define SLIST_REMOVE_HEAD(head, field)                                         \
+#define SLIST_REMOVE(head, elm, type, field)                                   \
+      SLIST_REMOVE_HEAD((head), field);                                        \
+#define LIST_HEAD(name, type)                                                  \
+#define LIST_HEAD_INITIALIZER(head)                                            \
+#define LIST_ENTRY(type)                                                       \
+#define LIST_FIRST(head) ((head)->lh_first)
+#define LIST_END(head) NULL
+#define LIST_EMPTY(head) ((head)->lh_first == LIST_END(head))
+#define LIST_NEXT(elm, field) ((elm)->field.le_next)
+#define LIST_FOREACH(var, head, field)                                         \
+  for ((var) = ((head)->lh_first); (var) != LIST_END(head);                    \
+#define LIST_FOREACH_SAFE(var, head, field, tvar)                              \
+  for ((var) = LIST_FIRST((head));                                             \
+       (var) != LIST_END(head) && ((tvar) = LIST_NEXT((var), field), 1);       \
+#define LIST_MOVE(head1, head2, field)                                         \
+    LIST_INIT((head2));                                                        \
+    if (!LIST_EMPTY((head1))) {                                                \
+      LIST_INIT((head1));                                                      \
+#define LIST_INIT(head)                                                        \
+    (head)->lh_first = LIST_END(head);                                         \
+#define LIST_INSERT_AFTER(listelm, elm, field)                                 \
+    if (((elm)->field.le_next = (listelm)->field.le_next) != LIST_END(head))   \
+#define LIST_INSERT_BEFORE(listelm, elm, field)                                \
+#define LIST_INSERT_HEAD(head, elm, field)                                     \
+    if (((elm)->field.le_next = (head)->lh_first) != LIST_END(head))           \
+#define LIST_REMOVE(elm, field)                                                \
+#define LIST_REPLACE(elm, elm2, field)                                         \
